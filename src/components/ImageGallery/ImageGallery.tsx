@@ -1,7 +1,7 @@
-import ImageCard from '../ImageCard/ImageCard';
-import css from './ImageGallery.module.css';
-import { ImageGalleryProps } from './ImageGallery.types';
-import { FC } from 'react';
+import ImageCard from "../ImageCard/ImageCard.js";
+import css from "./ImageGallery.module.css";
+import { ImageGalleryProps } from "./ImageGallery.types.js";
+import { FC } from "react";
 
 const ImageGallery: FC<ImageGalleryProps> = ({ images, onImageClick }) => {
   return (

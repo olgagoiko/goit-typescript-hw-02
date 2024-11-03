@@ -1,9 +1,9 @@
-import Modal from 'react-modal';
-import css from './ImageModal.module.css';
-import { FC } from 'react';
-import { IModalProps } from './ImageModal.types';
+import Modal from "react-modal";
+import css from "./ImageModal.module.css";
+import { FC } from "react";
+import { IModalProps } from "./ImageModal.types.js";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const ImageModal: FC<IModalProps> = ({ isOpen, onRequestClose, imageData }) => {
   if (!imageData) return null;
