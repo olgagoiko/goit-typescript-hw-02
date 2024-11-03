@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { IFetchResponse } from '../services/api.types';
 
 const API_KEY = 'kw6FqSclC4GTRHJucmuY0x5WbRsxvKGvElRM2Lc-OQY';
 axios.defaults.baseURL = 'https://api.unsplash.com/';
@@ -8,7 +9,10 @@ axios.defaults.params = {
   per_page: 15,
 };
 
-export const getPhotos = async (query, page) => {
+export const getPhotos = async (
+  query: string,
+  page: number = 1
+): Promise<IFetchResponse> => {
   const { data } = await axios.get(`search/photos?query=${query}&page=${page}`);
 
   return data;

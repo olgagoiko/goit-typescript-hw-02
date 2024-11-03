@@ -1,7 +1,9 @@
 import ImageCard from '../ImageCard/ImageCard';
 import css from './ImageGallery.module.css';
+import { ImageGalleryProps } from './ImageGallery.types';
+import { FC } from 'react';
 
-export default function ImageGallery({ images, onImageClick }) {
+const ImageGallery: FC<ImageGalleryProps> = ({ images, onImageClick }) => {
   return (
     <ul className={css.container}>
       {images &&
@@ -29,6 +31,7 @@ export default function ImageGallery({ images, onImageClick }) {
                       description,
                       likes,
                       name,
+                      instagram_username: '',
                     })
                   }
                 />
@@ -38,4 +41,6 @@ export default function ImageGallery({ images, onImageClick }) {
         )}
     </ul>
   );
-}
+};
+
+export default ImageGallery;

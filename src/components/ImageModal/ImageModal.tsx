@@ -1,9 +1,11 @@
 import Modal from 'react-modal';
 import css from './ImageModal.module.css';
+import { FC } from 'react';
+import { IModalProps } from './ImageModal.types';
 
 Modal.setAppElement('#root');
 
-const ImageModal = ({ isOpen, onRequestClose, imageData }) => {
+const ImageModal: FC<IModalProps> = ({ isOpen, onRequestClose, imageData }) => {
   if (!imageData) return null;
 
   const { regular, alt_description, description, likes, name } = imageData;
