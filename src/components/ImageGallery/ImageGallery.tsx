@@ -31,7 +31,7 @@ const ImageGallery: FC<ImageGalleryProps> = ({ images, onImageClick }) => {
                       description,
                       likes,
                       name,
-                      instagram_username: '',
+                      instagram_username,
                     })
                   }
                 />
