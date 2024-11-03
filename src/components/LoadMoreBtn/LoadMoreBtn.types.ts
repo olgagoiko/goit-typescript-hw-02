@@ -1,5 +1,6 @@
-import { MouseEventHandler } from "react";
+import React from 'react';
+import { MouseEventHandler } from 'react';
 
 export interface ILoadMoreBtnProps {
-    onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }

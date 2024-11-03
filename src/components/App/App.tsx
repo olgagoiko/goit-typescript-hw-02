@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import { getPhotos } from '../../services/api.js';
 import SearchBar from '../SearchBar/SearchBar.js';
 import Loader from '../Loader/Loader.js';
