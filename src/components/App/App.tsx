@@ -33,7 +33,7 @@ const App = () => {
         if (!results.length) {
           return setIsEmpty(true);
         }
-        setImages(prevImages => [...prevImages, ...results]);
+        setImages((prevImages: any) => [...prevImages, ...results]);
         setIsVisible(page < total_pages);
       } catch (error) {
         setError(false);
@@ -64,7 +64,7 @@ const App = () => {
   };
 
   const onLoadMore = () => {
-    setPage(prevPage => prevPage + 1);
+    setPage((prevPage: number) => prevPage + 1);
   };
 
   return (
