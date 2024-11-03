@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { getPhotos } from '../../services/api';
-import SearchBar from '../SearchBar/SearchBar';
-import Loader from '../Loader/Loader';
-import ImageGallery from '../ImageGallery/ImageGallery';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import ImageModal from '../ImageModal/ImageModal';
-import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import { getPhotos } from '../../services/api.js';
+import SearchBar from '../SearchBar/SearchBar.js';
+import Loader from '../Loader/Loader.js';
+import ImageGallery from '../ImageGallery/ImageGallery.js';
+import ErrorMessage from '../ErrorMessage/ErrorMessage.js';
+import ImageModal from '../ImageModal/ImageModal.js';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn.js';
 import './App.css';
-import { Image, IPicture } from './App.types';
+import { Image, IPicture } from './App.types.js';
 
 const App = () => {
   const [query, setQuery] = useState<string>('');
