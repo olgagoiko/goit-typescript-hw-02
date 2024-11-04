@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import css from './SearchBar.module.css';
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useState } from "react";
+import css from "./SearchBar.module.css";
+import { Toaster, toast } from "react-hot-toast";
 
 export default function SearchBar({
   onSubmit,
 }: {
   onSubmit: (query: string) => void;
 }) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState<string>("");
 
   const handlCeange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(evt.target.value);
@@ -15,11 +15,11 @@ export default function SearchBar({
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     if (!query.trim()) {
-      toast.error('Please enter text to search for images');
+      toast.error("Please enter text to search for images");
       return;
     }
     onSubmit(query);
-    setQuery('');
+    setQuery("");
   };
 
   return (
@@ -29,6 +29,8 @@ export default function SearchBar({
           className={css.input}
           type="text"
           name="query"
+          // autocomplete="off"
+          // autofocus
           placeholder="Search images and photos"
           value={query}
           onChange={handlCeange}

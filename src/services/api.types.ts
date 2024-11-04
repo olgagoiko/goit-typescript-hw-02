@@ -1,4 +1,4 @@
-import { IPicture } from '../components/App/App.types';
+import { IPicture } from '../components/App/App.types.js';
 
 export interface IFetchResponse {
   results: IPicture[];
